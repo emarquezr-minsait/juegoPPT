@@ -1,0 +1,29 @@
+<div class="container">
+    <b class="text-light">Score <span class="badge  text-dark">{{puntuacion}}</span></b>
+    <button type="button" class="btn btn-primary botonHome" [routerLink]="['/home']" type="submit">volver</button>
+</div>
+<a class="text-light msj">{{mensaje}}</a>
+
+
+<div class="fila" id="cont">
+    <!--CAMBIAR LA FORMA EN LA QUE METO ESTO Y PONERLO CON *ngFor, PARA ELLO HAY QUE AÑADIRLO EN EL .TS COMO UNA COLECCIÓN DE OBJETOS-->
+    <div class="card opcion" (click)="juego('piedra');" id="piedra">
+        <div class="card-body">
+            <img class="card-img-top" src="../../../assets/img/piedra.jpg">
+            <p class="card-text" aria-hidden="true">pedra</p>
+        </div>
+    </div>
+    <div class="card opcion" (click)="juego('papel')" id="papel">
+        <div class="card-body">
+            <img class="card-img-top" src=" ../../../assets/img/papel.jpg ">
+            <p class="card-text">paper</p>
+        </div>
+    </div>
+    <div class="card opcion" (click)="juego('tijeras');" id="tijeras">
+        <div class="card-body ">
+            <img class="card-img-top " src="../../../assets/img/tijeras.jpg ">
+            <p class="card-text ">tijeras</p>
+        </div>
+    </div>
+
+</div>

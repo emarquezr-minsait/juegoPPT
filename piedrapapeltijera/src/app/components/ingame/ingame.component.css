@@ -1,0 +1,54 @@
+.container {
+    margin: 30px;
+}
+
+.opcion {
+    /*opcion es la clase de donde está la tarjeta*/
+    width: 260px;
+    height: 260px;
+    align-items: center;
+    justify-content: center;
+    /*pointer-events: none; para poner eso de que los botones no furulen */
+}
+
+.funcion {
+    pointer-events: none;
+}
+
+.msj {
+    margin-left: 3em;
+    display: block
+}
+
+.opcion:hover {
+    opacity: 0.5;
+}
+
+.botonHome {
+    position: relative;
+    float: right;
+}
+
+.fila {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    /*lo mismo da si ponemos important que si no
+    esto me pasa por mezclar bootstrap con mis clases*/
+    text-align: center;
+    width: 100%;
+    margin-top: 2em;
+}
+
+
+/*
+.card-text {
+
+}
+*/
+
+
+/*
+no sé si puedo "sobreescribir" card-text que es una clase que usa bootstrap, o que esto añada cositas al original
+lo que quiero es que el texto me salga justo debajo y las fotos centradas
+*/

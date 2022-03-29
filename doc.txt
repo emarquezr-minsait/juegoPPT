@@ -1,0 +1,3 @@
+Voy a hacerla tipo SPA, para que la navegación sea "instantánea" y no haya tiempos de carga, más allá de los necesarios en las funciones de la aplicación
+
+funcionalidades con servicios para funcionar, por ejemplo pasarle datos a quien lo necesite, añadir el usuario al sistema, supongo que añadirle la puntuación y tal, ...

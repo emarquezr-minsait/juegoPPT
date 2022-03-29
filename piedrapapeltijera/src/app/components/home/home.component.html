@@ -1,0 +1,40 @@
+<!--
+    añadir el coger el texto del cuadro de input y pasárselo a la función getUser() como parámetro
+    esto lo podemos sacar de la sección del buscador del hermano este
+
+    la implementación que estoy haciendo yo es como que puedes añadirte con un usuario nuevo o coger el perfil de alguno que ya haya jugado antes
+    luego lo divido entre iniciar sesión y agregar usuario, que tenga más funcionalidades de las que se piden, si total me cuesta poco
+-->
+<div class="contenedorHome">
+    <h1 class="text-light">Join the game</h1>
+    <input class="form-control me-2 cuadroTexto" type="text" placeholder="Name*" aria-label="Name" (keyup.enter)="buscaUsuario(miembro.value)" #miembro />
+    <!--#miembro es como el identificador para encontrar esto-->
+    <a class="alert alert-danger" role="alert" *ngIf="campoVacio == true">{{
+    mensajeVacio
+  }}</a>
+
+    <!--
+
+    CAMBIAR ESTO POR UN MENÚ CON DOS BOTONES PARA AÑADIRSE AL SISTEMA O PARA HACER LOGIN
+    PORQUE SI QUIERES CREAR USUARIO CUANDO LE DAS A CREATE LO QUE HACE ES LLEVARTE A OTRA PÁGINA
+    
+    HACER ESO, O PERMITIR QUE SE CREE CON EL TEXTO QUE HAYA DENTRO DEL INPUT AL DARLE AL BOTÓN CREATE USER
+
+-->
+
+    <a class="alert alert-danger" role="alert" *ngIf="usuarioNoValido == true">{{
+    mensajeNoValido
+  }}</a>
+    <button type="button" class="btn btn-primary boton" (click)="buscaUsuario(miembro.value)" type="submit">
+    Join
+  </button>
+    <p>Or <button type="button" class="btn btn-primary boton" [routerLink]="['/add-user']" type="submit">
+        Create user
+      </button></p>
+
+
+    <!--y cuando le pasemos ese parámetro, si tenemos usuario (y si no lo creamos) pasemos a la pantalla del juego con [routerLink] = "['ingame']" 
+
+si queremos que la ruta sea más larga le podemos ir añadiendo cositas a la ruta, tal que [routerLink] = "['home', 'ingame']" nos llevaría a localhost:4200/home/ingame
+-->
+</div>
